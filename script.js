@@ -3,16 +3,26 @@ const nav = document.getElementById("nav");
 
 // Мобильное меню
 
+if (menuButton && nav) {
 menuButton.addEventListener("click", () => {
 nav.classList.toggle("open");
 document.body.classList.toggle("menu-open");
 });
+}
+
+// Закрытие мобильного меню после перехода
 
 document.querySelectorAll(".nav a").forEach(link => {
 link.addEventListener("click", () => {
+if (nav) {
 nav.classList.remove("open");
-document.body.classList.remove("menu-open");
+}
+
+```
+    document.body.classList.remove("menu-open");
 });
+```
+
 });
 
 // Фильтрация меню
@@ -61,11 +71,15 @@ addButtons.forEach(button => {
 button.addEventListener("click", () => {
 
     if (button.classList.contains("added")) {
+
         button.classList.remove("added");
         button.textContent = "Добавить";
+
     } else {
+
         button.classList.add("added");
         button.textContent = "Добавлено ✓";
+
     }
 
 });
@@ -73,14 +87,19 @@ button.addEventListener("click", () => {
 
 });
 
-// Закрытие меню при изменении размера
+// Закрытие мобильного меню при переходе на ПК
 
 window.addEventListener("resize", () => {
 
 ```
 if (window.innerWidth > 800) {
-    nav.classList.remove("open");
+
+    if (nav) {
+        nav.classList.remove("open");
+    }
+
     document.body.classList.remove("menu-open");
+
 }
 ```
 
@@ -93,11 +112,17 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 ```
 link.addEventListener("click", event => {
 
-    const target = document.querySelector(
-        link.getAttribute("href")
-    );
+    const targetId = link.getAttribute("href");
 
-    if (!target) return;
+    if (!targetId || targetId === "#") {
+        return;
+    }
+
+    const target = document.querySelector(targetId);
+
+    if (!target) {
+        return;
+    }
 
     event.preventDefault();
 
