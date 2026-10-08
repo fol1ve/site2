@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Portfolio — Web Designer</title>
+<meta name="description" content="Персональное портфолио веб-разработчика">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+```
+
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container header-inner">
+        <a href="#home" class="logo">studio<span>.</span></a>
+
+```
+    <nav class="nav" id="nav">
+        <a href="#home" class="active">Главная</a>
+        <a href="#about">О проекте</a>
+        <a href="#works">Работы</a>
+        <a href="#skills">Навыки</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+
+    <button class="menu-button" id="menuButton" aria-label="Меню">
+        <span></span>
+        <span></span>
+    </button>
+</div>
+```
+
+</header>
+
+<main>
+
+```
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-grid"></div>
+
+    <div class="container hero-content">
+
+        <div class="hero-label">
+            <span></span>
+            WEB DESIGN & DEVELOPMENT
+        </div>
+
+        <h1>
+            Создаём сайты,
+            <br>
+            которые <em>работают.</em>
+        </h1>
+
+        <p class="hero-text">
+            Современный дизайн, удобный интерфейс и чистый код.
+            Небольшая коллекция веб-проектов и экспериментов.
+        </p>
+
+        <div class="hero-actions">
+            <a href="#works" class="button button-main">
+                Смотреть работы
+                <span>↓</span>
+            </a>
+
+            <a href="#about" class="button button-outline">
+                Узнать больше
+            </a>
+        </div>
+
+    </div>
+
+    <div class="hero-bottom">
+        <span>SCROLL TO EXPLORE</span>
+        <span>© 2026</span>
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+<section class="about section" id="about">
+    <div class="container">
+
+        <div class="section-top">
+            <span class="section-number">01</span>
+            <span>О проекте</span>
+        </div>
+
+        <div class="about-grid">
+
+            <h2>
+                Простота —
+                <br>
+                это тоже дизайн.
+            </h2>
+
+            <div class="about-text">
+                <p>
+                    Этот сайт — пример современного персонального
+                    портфолио. Он показывает, как можно объединить
+                    минималистичный дизайн, анимации и удобную
+                    навигацию в одном проекте.
+                </p>
+
+                <p>
+                    Каждый элемент создан с учётом адаптивности,
+                    поэтому сайт одинаково хорошо выглядит на
+                    компьютере, планшете и телефоне.
+                </p>
+
+                <div class="about-stats">
+                    <div>
+                        <strong>12+</strong>
+                        <span>Проектов</span>
+                    </div>
+
+                    <div>
+                        <strong>3</strong>
+                        <span>Направления</span>
+                    </div>
+
+                    <div>
+                        <strong>100%</strong>
+                        <span>Responsive</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- WORKS -->
+<section class="works section" id="works">
+    <div class="container">
+
+        <div class="section-top">
+            <span class="section-number">02</span>
+            <span>Избранные работы</span>
+        </div>
+
+        <div class="works-header">
+            <h2>Проекты</h2>
+
+            <p>
+                Несколько концептов,
+                созданных в разных направлениях.
+            </p>
+        </div>
+
+
+        <div class="projects">
+
+            <article class="project project-large">
+                <div class="project-visual fashion">
+                    <span class="project-number">01</span>
+
+                    <div class="visual-title">
+                        <small>FASHION / STORE</small>
+                        <strong>NOIR</strong>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <div>
+                        <h3>NOIR — Fashion Store</h3>
+                        <p>
+                            Минималистичный интернет-магазин
+                            одежды с каталогом и карточками товаров.
+                        </p>
+                    </div>
+
+                    <span class="project-arrow">↗</span>
+                </div>
+            </article>
+
+
+            <article class="project">
+                <div class="project-visual coffee">
+                    <span class="project-number">02</span>
+
+                    <div class="visual-title">
+                        <small>CAFE / BRANDING</small>
+                        <strong>ROAST</strong>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <div>
+                        <h3>Roast Coffee</h3>
+                        <p>
+                            Сайт небольшой кофейни
+                            с меню и атмосферным дизайном.
+                        </p>
+                    </div>
+
+                    <span class="project-arrow">↗</span>
+                </div>
+            </article>
+
+
+            <article class="project">
+                <div class="project-visual tech">
+                    <span class="project-number">03</span>
+
+                    <div class="visual-title">
+                        <small>DIGITAL / PRODUCT</small>
+                        <strong>NOVA</strong>
+                    </div>
+                </div>
+
+                <div class="project-info">
+                    <div>
+                        <h3>Nova Dashboard</h3>
+                        <p>
+                            Концепт интерфейса цифрового
+                            продукта и аналитической панели.
+                        </p>
+                    </div>
+
+                    <span class="project-arrow">↗</span>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- SKILLS -->
+<section class="skills section" id="skills">
+    <div class="container">
+
+        <div class="section-top">
+            <span class="section-number">03</span>
+            <span>Навыки</span>
+        </div>
+
+        <div class="skills-layout">
+
+            <h2>
+                Инструменты
+                <br>
+                проекта
+            </h2>
+
+            <div class="skills-list">
+
+                <div class="skill">
+                    <span>01</span>
+                    <div>
+                        <h3>HTML</h3>
+                        <p>Структура и семантика страниц</p>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <span>02</span>
+                    <div>
+                        <h3>CSS</h3>
+                        <p>Стилизация и адаптивная вёрстка</p>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <span>03</span>
+                    <div>
+                        <h3>JavaScript</h3>
+                        <p>Интерактивные элементы и логика</p>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <span>04</span>
+                    <div>
+                        <h3>UI / UX</h3>
+                        <p>Простые и понятные интерфейсы</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact section" id="contact">
+    <div class="container">
+
+        <div class="contact-card">
+
+            <div class="contact-label">
+                LET'S WORK TOGETHER
+            </div>
+
+            <h2>
+                Есть идея?
+                <br>
+                Давайте обсудим.
+            </h2>
+
+            <a href="mailto:hello@example.com" class="contact-button">
+                Написать нам
+                <span>↗</span>
+            </a>
+
+        </div>
+
+    </div>
+</section>
+```
+
+</main>
+
+<footer class="footer">
+    <div class="container footer-inner">
+        <span>studio.</span>
+        <span>Designed & developed with care.</span>
+        <span>2026</span>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
