@@ -1,104 +1,100 @@
 const menuButton = document.getElementById("menuButton");
 const nav = document.getElementById("nav");
-const navLinks = document.querySelectorAll(".nav a");
-const sections = document.querySelectorAll("section[id]");
 
-/* MOBILE MENU */
+// Мобильное меню
 
 menuButton.addEventListener("click", () => {
 nav.classList.toggle("open");
 document.body.classList.toggle("menu-open");
 });
 
-navLinks.forEach(link => {
+document.querySelectorAll(".nav a").forEach(link => {
 link.addEventListener("click", () => {
 nav.classList.remove("open");
 document.body.classList.remove("menu-open");
 });
 });
 
-/* ACTIVE NAVIGATION */
+// Фильтрация меню
 
-function updateActiveLink() {
-let currentSection = "";
+const categoryButtons = document.querySelectorAll(".category");
+const menuCards = document.querySelectorAll(".menu-card");
+
+categoryButtons.forEach(button => {
 
 ```
-sections.forEach(section => {
-    const sectionTop = section.offsetTop - 160;
-    const sectionBottom = sectionTop + section.offsetHeight;
+button.addEventListener("click", () => {
 
-    if (
-        window.scrollY >= sectionTop &&
-        window.scrollY < sectionBottom
-    ) {
-        currentSection = section.id;
-    }
-});
+    categoryButtons.forEach(item => {
+        item.classList.remove("active");
+    });
 
-navLinks.forEach(link => {
-    link.classList.remove("active");
+    button.classList.add("active");
 
-    if (link.getAttribute("href") === `#${currentSection}`) {
-        link.classList.add("active");
-    }
+    const category = button.dataset.category;
+
+    menuCards.forEach(card => {
+
+        if (
+            category === "all" ||
+            card.dataset.category === category
+        ) {
+            card.classList.remove("hidden");
+        } else {
+            card.classList.add("hidden");
+        }
+
+    });
+
 });
 ```
 
-}
+});
 
-window.addEventListener("scroll", updateActiveLink);
-window.addEventListener("load", updateActiveLink);
+// Кнопки "Добавить"
 
-/* HEADER BACKGROUND */
+const addButtons = document.querySelectorAll(".add-button");
 
-const header = document.querySelector(".header");
+addButtons.forEach(button => {
 
-function updateHeader() {
-if (window.scrollY > 30) {
-header.style.background = "rgba(12, 12, 12, 0.94)";
-} else {
-header.style.background = "rgba(12, 12, 12, 0.8)";
-}
-}
+```
+button.addEventListener("click", () => {
 
-window.addEventListener("scroll", updateHeader);
+    if (button.classList.contains("added")) {
+        button.classList.remove("added");
+        button.textContent = "Добавить";
+    } else {
+        button.classList.add("added");
+        button.textContent = "Добавлено ✓";
+    }
 
-/* CLOSE MOBILE MENU WHEN RESIZING */
+});
+```
+
+});
+
+// Закрытие меню при изменении размера
 
 window.addEventListener("resize", () => {
+
+```
 if (window.innerWidth > 800) {
-nav.classList.remove("open");
-document.body.classList.remove("menu-open");
+    nav.classList.remove("open");
+    document.body.classList.remove("menu-open");
 }
-});
-
-/* PROJECT HOVER */
-
-const projects = document.querySelectorAll(".project");
-
-projects.forEach(project => {
-
-```
-project.addEventListener("mouseenter", () => {
-    project.style.zIndex = "2";
-});
-
-project.addEventListener("mouseleave", () => {
-    project.style.zIndex = "1";
-});
 ```
 
 });
 
-/* SMOOTH SCROLL */
+// Плавная прокрутка
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]').forEach(link => {
 
 ```
-anchor.addEventListener("click", function(event) {
+link.addEventListener("click", event => {
 
     const target = document.querySelector(
-        this.getAttribute("href")
+        link.getAttribute("href")
     );
 
     if (!target) return;
