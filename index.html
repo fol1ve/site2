@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 ```
-<title>Portfolio — Web Designer</title>
-<meta name="description" content="Персональное портфолио веб-разработчика">
+<title>Шаурма №7 — вкусно, сочно, рядом</title>
+<meta name="description" content="Шаурма №7 — шаурма, бургеры, картофель и напитки. Заказывайте с собой или приходите к нам.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,21 +22,29 @@
 
 <header class="header">
     <div class="container header-inner">
-        <a href="#home" class="logo">studio<span>.</span></a>
 
 ```
+    <a href="#home" class="logo">
+        <span>№7</span>
+        ШАУРМА
+    </a>
+
     <nav class="nav" id="nav">
-        <a href="#home" class="active">Главная</a>
-        <a href="#about">О проекте</a>
-        <a href="#works">Работы</a>
-        <a href="#skills">Навыки</a>
-        <a href="#contact">Контакты</a>
+        <a href="#menu">Меню</a>
+        <a href="#about">О нас</a>
+        <a href="#delivery">Доставка</a>
+        <a href="#contacts">Контакты</a>
     </nav>
 
-    <button class="menu-button" id="menuButton" aria-label="Меню">
+    <a href="#menu" class="header-button">
+        Заказать
+    </a>
+
+    <button class="menu-button" id="menuButton" aria-label="Открыть меню">
         <span></span>
         <span></span>
     </button>
+
 </div>
 ```
 
@@ -46,292 +54,451 @@
 
 ```
 <!-- HERO -->
+
 <section class="hero" id="home">
-    <div class="hero-grid"></div>
 
     <div class="container hero-content">
 
-        <div class="hero-label">
-            <span></span>
-            WEB DESIGN & DEVELOPMENT
-        </div>
+        <div class="hero-info">
 
-        <h1>
-            Создаём сайты,
-            <br>
-            которые <em>работают.</em>
-        </h1>
+            <div class="hero-label">
+                <span></span>
+                ОТКРЫТЫ СЕГОДНЯ ДО 23:00
+            </div>
 
-        <p class="hero-text">
-            Современный дизайн, удобный интерфейс и чистый код.
-            Небольшая коллекция веб-проектов и экспериментов.
-        </p>
-
-        <div class="hero-actions">
-            <a href="#works" class="button button-main">
-                Смотреть работы
-                <span>↓</span>
-            </a>
-
-            <a href="#about" class="button button-outline">
-                Узнать больше
-            </a>
-        </div>
-
-    </div>
-
-    <div class="hero-bottom">
-        <span>SCROLL TO EXPLORE</span>
-        <span>© 2026</span>
-    </div>
-</section>
-
-
-<!-- ABOUT -->
-<section class="about section" id="about">
-    <div class="container">
-
-        <div class="section-top">
-            <span class="section-number">01</span>
-            <span>О проекте</span>
-        </div>
-
-        <div class="about-grid">
-
-            <h2>
-                Простота —
+            <h1>
+                Шаурма,
                 <br>
-                это тоже дизайн.
-            </h2>
+                которую хочется
+                <span>ещё.</span>
+            </h1>
 
-            <div class="about-text">
-                <p>
-                    Этот сайт — пример современного персонального
-                    портфолио. Он показывает, как можно объединить
-                    минималистичный дизайн, анимации и удобную
-                    навигацию в одном проекте.
-                </p>
+            <p>
+                Сочное мясо, свежие овощи, фирменный соус
+                и хрустящий лаваш. Готовим прямо после заказа.
+            </p>
 
-                <p>
-                    Каждый элемент создан с учётом адаптивности,
-                    поэтому сайт одинаково хорошо выглядит на
-                    компьютере, планшете и телефоне.
-                </p>
+            <div class="hero-buttons">
+                <a href="#menu" class="button button-red">
+                    Смотреть меню
+                </a>
 
-                <div class="about-stats">
-                    <div>
-                        <strong>12+</strong>
-                        <span>Проектов</span>
-                    </div>
-
-                    <div>
-                        <strong>3</strong>
-                        <span>Направления</span>
-                    </div>
-
-                    <div>
-                        <strong>100%</strong>
-                        <span>Responsive</span>
-                    </div>
-                </div>
+                <a href="#delivery" class="button button-light">
+                    Доставка
+                </a>
             </div>
 
         </div>
+
+        <div class="hero-food">
+
+            <div class="food-circle">
+                <div class="food-shawarma">
+                    🌯
+                </div>
+            </div>
+
+            <div class="hero-badge">
+                <strong>от 199 ₽</strong>
+                <span>горячая и свежая</span>
+            </div>
+
+        </div>
+
     </div>
+
 </section>
 
 
-<!-- WORKS -->
-<section class="works section" id="works">
-    <div class="container">
+<!-- ADVANTAGES -->
 
-        <div class="section-top">
-            <span class="section-number">02</span>
-            <span>Избранные работы</span>
+<section class="advantages">
+
+    <div class="container advantages-grid">
+
+        <div class="advantage">
+            <div class="advantage-icon">🥙</div>
+            <div>
+                <strong>Готовим при вас</strong>
+                <span>Никаких заготовок на весь день</span>
+            </div>
         </div>
 
-        <div class="works-header">
-            <h2>Проекты</h2>
+        <div class="advantage">
+            <div class="advantage-icon">🥬</div>
+            <div>
+                <strong>Свежие продукты</strong>
+                <span>Овощи и мясо каждый день</span>
+            </div>
+        </div>
+
+        <div class="advantage">
+            <div class="advantage-icon">⚡</div>
+            <div>
+                <strong>Быстро</strong>
+                <span>Среднее время ожидания — 10 минут</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MENU -->
+
+<section class="section menu-section" id="menu">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <div>
+                <span class="section-label">НАШЕ МЕНЮ</span>
+                <h2>Выбирай, что по душе</h2>
+            </div>
 
             <p>
-                Несколько концептов,
-                созданных в разных направлениях.
+                Всё готовим после заказа.
+                Можно добавить или убрать ингредиенты.
             </p>
         </div>
 
 
-        <div class="projects">
+        <div class="categories">
 
-            <article class="project project-large">
-                <div class="project-visual fashion">
-                    <span class="project-number">01</span>
+            <button class="category active" data-category="all">
+                Всё
+            </button>
 
-                    <div class="visual-title">
-                        <small>FASHION / STORE</small>
-                        <strong>NOIR</strong>
-                    </div>
+            <button class="category" data-category="shawarma">
+                Шаурма
+            </button>
+
+            <button class="category" data-category="burgers">
+                Бургеры
+            </button>
+
+            <button class="category" data-category="snacks">
+                Закуски
+            </button>
+
+            <button class="category" data-category="drinks">
+                Напитки
+            </button>
+
+        </div>
+
+
+        <div class="menu-grid">
+
+            <article class="menu-card" data-category="shawarma">
+                <div class="menu-image shawarma-image">
+                    🌯
                 </div>
 
-                <div class="project-info">
-                    <div>
-                        <h3>NOIR — Fashion Store</h3>
-                        <p>
-                            Минималистичный интернет-магазин
-                            одежды с каталогом и карточками товаров.
-                        </p>
+                <div class="menu-card-content">
+                    <div class="menu-card-title">
+                        <h3>Шаурма классическая</h3>
+                        <strong>249 ₽</strong>
                     </div>
 
-                    <span class="project-arrow">↗</span>
+                    <p>
+                        Курица, капуста, огурец, помидор,
+                        фирменный соус.
+                    </p>
+
+                    <button class="add-button">
+                        Добавить
+                    </button>
                 </div>
             </article>
 
 
-            <article class="project">
-                <div class="project-visual coffee">
-                    <span class="project-number">02</span>
-
-                    <div class="visual-title">
-                        <small>CAFE / BRANDING</small>
-                        <strong>ROAST</strong>
-                    </div>
+            <article class="menu-card" data-category="shawarma">
+                <div class="menu-image spicy-image">
+                    🌯
+                    <span class="hot">ОСТРАЯ</span>
                 </div>
 
-                <div class="project-info">
-                    <div>
-                        <h3>Roast Coffee</h3>
-                        <p>
-                            Сайт небольшой кофейни
-                            с меню и атмосферным дизайном.
-                        </p>
+                <div class="menu-card-content">
+                    <div class="menu-card-title">
+                        <h3>Шаурма острая</h3>
+                        <strong>279 ₽</strong>
                     </div>
 
-                    <span class="project-arrow">↗</span>
+                    <p>
+                        Курица, овощи, халапеньо,
+                        острый фирменный соус.
+                    </p>
+
+                    <button class="add-button">
+                        Добавить
+                    </button>
                 </div>
             </article>
 
 
-            <article class="project">
-                <div class="project-visual tech">
-                    <span class="project-number">03</span>
-
-                    <div class="visual-title">
-                        <small>DIGITAL / PRODUCT</small>
-                        <strong>NOVA</strong>
-                    </div>
+            <article class="menu-card" data-category="shawarma">
+                <div class="menu-image cheese-image">
+                    🌯
                 </div>
 
-                <div class="project-info">
-                    <div>
-                        <h3>Nova Dashboard</h3>
-                        <p>
-                            Концепт интерфейса цифрового
-                            продукта и аналитической панели.
-                        </p>
+                <div class="menu-card-content">
+                    <div class="menu-card-title">
+                        <h3>Сырная шаурма</h3>
+                        <strong>299 ₽</strong>
                     </div>
 
-                    <span class="project-arrow">↗</span>
+                    <p>
+                        Курица, сыр, овощи,
+                        чесночный соус.
+                    </p>
+
+                    <button class="add-button">
+                        Добавить
+                    </button>
+                </div>
+            </article>
+
+
+            <article class="menu-card" data-category="burgers">
+                <div class="menu-image burger-image">
+                    🍔
+                </div>
+
+                <div class="menu-card-content">
+                    <div class="menu-card-title">
+                        <h3>Чикен бургер</h3>
+                        <strong>259 ₽</strong>
+                    </div>
+
+                    <p>
+                        Хрустящая курица, салат,
+                        помидор и соус.
+                    </p>
+
+                    <button class="add-button">
+                        Добавить
+                    </button>
+                </div>
+            </article>
+
+
+            <article class="menu-card" data-category="snacks">
+                <div class="menu-image fries-image">
+                    🍟
+                </div>
+
+                <div class="menu-card-content">
+                    <div class="menu-card-title">
+                        <h3>Картофель фри</h3>
+                        <strong>149 ₽</strong>
+                    </div>
+
+                    <p>
+                        Хрустящий картофель
+                        с солью.
+                    </p>
+
+                    <button class="add-button">
+                        Добавить
+                    </button>
+                </div>
+            </article>
+
+
+            <article class="menu-card" data-category="drinks">
+                <div class="menu-image drink-image">
+                    🥤
+                </div>
+
+                <div class="menu-card-content">
+                    <div class="menu-card-title">
+                        <h3>Лимонад</h3>
+                        <strong>119 ₽</strong>
+                    </div>
+
+                    <p>
+                        Холодный домашний лимонад
+                        с лимоном и мятой.
+                    </p>
+
+                    <button class="add-button">
+                        Добавить
+                    </button>
                 </div>
             </article>
 
         </div>
 
     </div>
+
 </section>
 
 
-<!-- SKILLS -->
-<section class="skills section" id="skills">
-    <div class="container">
+<!-- COMBO -->
 
-        <div class="section-top">
-            <span class="section-number">03</span>
-            <span>Навыки</span>
-        </div>
+<section class="combo" id="delivery">
 
-        <div class="skills-layout">
+    <div class="container combo-content">
+
+        <div>
+            <span class="section-label">ВЫГОДНЫЙ КОМБО</span>
 
             <h2>
-                Инструменты
+                Шаурма + фри +
                 <br>
-                проекта
+                напиток
             </h2>
 
-            <div class="skills-list">
+            <p>
+                Собрали самое популярное в один набор.
+                И получилось дешевле.
+            </p>
 
-                <div class="skill">
+            <div class="combo-price">
+                <strong>399 ₽</strong>
+                <del>467 ₽</del>
+            </div>
+
+            <button class="button button-red">
+                Заказать комбо
+            </button>
+        </div>
+
+        <div class="combo-visual">
+            <div>🌯</div>
+            <span>+</span>
+            <div>🍟</div>
+            <span>+</span>
+            <div>🥤</div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section about" id="about">
+
+    <div class="container about-grid">
+
+        <div>
+            <span class="section-label">ПОЧЕМУ МЫ</span>
+
+            <h2>
+                Простая еда.
+                <br>
+                Хороший вкус.
+            </h2>
+        </div>
+
+        <div class="about-text">
+
+            <p>
+                «Шаурма №7» — небольшое городское кафе,
+                где главное не сложные рецепты, а нормальная
+                еда из свежих продуктов.
+            </p>
+
+            <p>
+                Мы не экономим на мясе и соусах, каждый заказ
+                собираем отдельно, а если что-то не нравится —
+                просто скажите сотруднику.
+            </p>
+
+            <div class="about-list">
+                <div>
                     <span>01</span>
-                    <div>
-                        <h3>HTML</h3>
-                        <p>Структура и семантика страниц</p>
-                    </div>
+                    <strong>Курица и говядина</strong>
                 </div>
 
-                <div class="skill">
+                <div>
                     <span>02</span>
-                    <div>
-                        <h3>CSS</h3>
-                        <p>Стилизация и адаптивная вёрстка</p>
-                    </div>
+                    <strong>Домашние соусы</strong>
                 </div>
 
-                <div class="skill">
+                <div>
                     <span>03</span>
-                    <div>
-                        <h3>JavaScript</h3>
-                        <p>Интерактивные элементы и логика</p>
-                    </div>
+                    <strong>Свежие овощи</strong>
                 </div>
-
-                <div class="skill">
-                    <span>04</span>
-                    <div>
-                        <h3>UI / UX</h3>
-                        <p>Простые и понятные интерфейсы</p>
-                    </div>
-                </div>
-
             </div>
 
         </div>
+
     </div>
+
 </section>
 
 
-<!-- CONTACT -->
-<section class="contact section" id="contact">
+<!-- CONTACTS -->
+
+<section class="contacts" id="contacts">
+
     <div class="container">
 
-        <div class="contact-card">
+        <div class="contacts-box">
 
-            <div class="contact-label">
-                LET'S WORK TOGETHER
+            <div>
+                <span class="section-label">ЗАХОДИ В ГОСТИ</span>
+
+                <h2>
+                    Будем ждать
+                    <br>
+                    тебя сегодня.
+                </h2>
             </div>
 
-            <h2>
-                Есть идея?
-                <br>
-                Давайте обсудим.
-            </h2>
+            <div class="contact-info">
 
-            <a href="mailto:hello@example.com" class="contact-button">
-                Написать нам
-                <span>↗</span>
-            </a>
+                <div>
+                    <span>АДРЕС</span>
+                    <strong>ул. Центральная, 17</strong>
+                </div>
+
+                <div>
+                    <span>ТЕЛЕФОН</span>
+                    <strong>+7 (900) 123-45-67</strong>
+                </div>
+
+                <div>
+                    <span>ВРЕМЯ РАБОТЫ</span>
+                    <strong>10:00 — 23:00</strong>
+                </div>
+
+            </div>
 
         </div>
 
     </div>
+
 </section>
 ```
 
 </main>
 
 <footer class="footer">
-    <div class="container footer-inner">
-        <span>studio.</span>
-        <span>Designed & developed with care.</span>
-        <span>2026</span>
+
+```
+<div class="container footer-inner">
+
+    <div class="logo">
+        <span>№7</span> ШАУРМА
     </div>
+
+    <p>
+        © 2026 Шаурма №7
+    </p>
+
+    <a href="#home">
+        Наверх ↑
+    </a>
+
+</div>
+```
+
 </footer>
 
 <script src="script.js"></script>
